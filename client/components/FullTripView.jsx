@@ -51,7 +51,7 @@ const FullTripView = (props) => {
             <Link to='/day-view'>
               <button>See Details</button>
             </Link>
-            <table>
+            {/* <table>
               <thead>
                 <tr>{"Itinerary"}</tr>
               </thead>
@@ -59,9 +59,9 @@ const FullTripView = (props) => {
                 <tr>{"Insert row here"}</tr>
               </tbody>
               {/* every row will be an event fetched from database */}
-            </table>
+            {/* </table> */}
             {/* feel like this button is repetitive */}
-            <button>Add Details</button>
+            {/* <button>Add Details</button> */} 
           </Route>
           <Route exact path='/' component={TripModal} />
           <Route exact path='/day-view' component={DayView} />

@@ -8,7 +8,7 @@ const app = express.Router();
 
 // get request
 app.get('/trips', tripController.getTrips);
-
+app.get('/events', eventController.getEvents);
 
 //post request
 app.post('/new-trip', tripController.addTrip, (req,res) => {

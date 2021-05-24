@@ -49,7 +49,7 @@ useEffect(() => {
     fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${locations[i]}&key=AIzaSyA4ASEqYx1KR_ivk3v1kntziAPUi1Z3qek`)
       .then(res => res.json())
       .then((data) => {
-        tempArray.push(<Marker position={data.results[0].geometry.location} key={i} onClick={openPinModal}/>);
+        tempArray.push(<Marker position={data.results[0].geometry.location} key={locations[i]} onClick={openPinModal}/>);
         updateMarkerArray(oldArray => [...oldArray, tempArray]);
         if (markerArray.length === locations.length) return markerArray;
       })
