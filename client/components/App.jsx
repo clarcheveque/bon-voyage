@@ -20,7 +20,7 @@ function App() {
   }
 
   function closePinModal() {
-    setPinIsOpen(false);
+      setPinIsOpen(false);
   }
 
   function openNewTripModal() {
@@ -45,19 +45,19 @@ function App() {
           </button>
         </Link>
         <Map />
-        <Modal
+        {/* <Modal
           isOpen={pinModalIsOpen}
           onRequestClose={closePinModal}
           contentLabel='Modal to view existing pins'
         >
-          <TripModal  />
-        </Modal>
+          <TripModal />
+        </Modal> */}
         <Modal
           isOpen={newTripModalIsOpen}
           onRequestClose={closeNewTripModal}
           contentLabel='Modal to add new trip'
           >
-            <NewTripModal/>
+            <NewTripModal />
           </Modal>
       </div>
     </Router>

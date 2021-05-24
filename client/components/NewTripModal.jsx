@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import App from './App.jsx'
 
 Modal.setAppElement('#root');
 
@@ -42,39 +43,46 @@ function NewTripModal() {
   }
 
   return (
-    <form onSubmit = {handleSubmit}>
-      <label forhtml='tripName'>
-        Trip Name: 
-        </label>
-        <input name="name" onChange={handleChange} />
-        <br></br>
-      <label>
-        Start Date: 
-        <input type="date" name="start_date" onChange={handleChange}/>
-        <br></br>
-      </label>
-      <label>
-        End Date: 
-        <input type="date" name="end_date" onChange={handleChange} />
-        <br></br>
-      </label>
-      <label>
-        People: 
-        <input name="people" onChange={handleChange} />
-        <br></br>
-      </label>
-      {/* <label>
-        Favorite Picture: 
-        <input type="file" name="coverPicture" onChange={handleChange} />
-        <br></br> */
-      /* </label> */}
-      <label>
-        Location: 
-        </label>
-        <input name="location" onChange={handleChange} />
-        <br></br>
-      <input type="submit" value="Submit" />
-    </form>
+    <Router>
+      <Switch>
+        <Route exact path="/new-trip">
+          <form onSubmit = {handleSubmit}>
+            <label forhtml='tripName'>
+              Trip Name: 
+              </label>
+              <input name="name" onChange={handleChange} />
+              <br></br>
+            <label>
+              Start Date: 
+              <input type="date" name="start_date" onChange={handleChange}/>
+              <br></br>
+            </label>
+            <label>
+              End Date: 
+              <input type="date" name="end_date" onChange={handleChange} />
+              <br></br>
+            </label>
+            <label>
+              People: 
+              <input name="people" onChange={handleChange} />
+              <br></br>
+            </label>
+            {/* <label>
+              Favorite Picture: 
+              <input type="file" name="coverPicture" onChange={handleChange} />
+              <br></br> */
+              /* </label> */}
+            <label>
+              Location: 
+              </label>
+              <input name="location" onChange={handleChange} />
+              <br></br>
+            <input type="submit" value="Submit" />
+          </form>
+        </Route>
+        <Route exact path="/" component={App} />
+      </Switch>
+    </Router>
   )
 }
 
