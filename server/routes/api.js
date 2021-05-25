@@ -3,6 +3,7 @@ const express = require('express');
 
 //middleware
 const tripController = require('../controllers/tripController');
+const eventController = require('../controllers/eventController');
 //const eventController = require('../controllers/eventController');
 const app = express.Router();
 

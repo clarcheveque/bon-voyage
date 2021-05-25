@@ -3,7 +3,8 @@ const db = require('../models/model.js');
 const eventController = {};
 
 eventController.getEvent = (req, res, next) => {
-  res.status(200).json([{
+  return (
+    res.status(200).json([{
     time: '10 AM',
     location: 'Griffith Observatory',
     description: 'went for a hike then watched the stars',
@@ -15,7 +16,7 @@ eventController.getEvent = (req, res, next) => {
     description: 'toured campus',
     people: 'Larry Han',
     link: 'http://ucla.edu'
-  }])
+  }]))
 }
 
 module.exports = eventController;

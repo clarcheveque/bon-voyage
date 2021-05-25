@@ -7,22 +7,22 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 Modal.setAppElement('#root');
 
 const DayView = props => {
-  const [eventData, updateEventData] = useState([]);
+  // const [eventData, updateEventData] = useState([]);
 
-  //fetch location from state
-  const location = 'Portland, OR'
+  // //fetch location from state
+  // const location = 'Portland, OR'
 
-  //upon render of component, fetch event data from database
-  useEffect(() => {
-    fetch(`/api/events?location=${location}`)
-      .then(result => {
-        return result.json()
-      })
-      .then(data => {
-        updateEventData(data);
-      })
-      .catch(err => console.log(`error in useEffect of DayView: ${err}`))
-  }, [])
+  // //upon render of component, fetch event data from database
+  // useEffect(() => {
+  //   fetch(`/api/events?location=${location}`)
+  //     .then(result => {
+  //       return result.json()
+  //     })
+  //     .then(data => {
+  //       updateEventData(data);
+  //     })
+  //     .catch(err => console.log(`error in useEffect of DayView: ${err}`))
+  // }, [])
 
   return (
     <Router>
